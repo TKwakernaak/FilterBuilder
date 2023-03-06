@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuackLibs.FilterBuilder", "QuackLibs.FilterBuilder\QuackLibs.FilterBuilder.csproj", "{57617B9D-2D52-47C9-8108-F788D1EEA135}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuackLibs.FilterBuilder", "QuackLibs.FilterBuilder\QuackLibs.FilterBuilder.csproj", "{57617B9D-2D52-47C9-8108-F788D1EEA135}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{77C71A96-F3E0-447E-B3D2-9A21E106514F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuackLibs.FilterBuilder.Tests", "QuackLibs.FilterBuilder.Tests\QuackLibs.FilterBuilder.Tests.csproj", "{677978FE-9E33-4D88-8DC1-C1D3AAA64E7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuackLibs.FilterBuilder.Tests", "QuackLibs.FilterBuilder.Tests\QuackLibs.FilterBuilder.Tests.csproj", "{677978FE-9E33-4D88-8DC1-C1D3AAA64E7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F25215DA-3F74-4579-A2DC-96A27CC68118}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
