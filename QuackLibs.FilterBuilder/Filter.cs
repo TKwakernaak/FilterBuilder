@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
 namespace QuackLibs.FilterBuilder;
 
@@ -10,7 +7,7 @@ public class Filter<T>
     /// <summary>
     /// The predicate that holds the current expression.
     /// </summary>
-    private Expression<Func<T, bool>> _currentFilter;
+    public Expression<Func<T, bool>> _currentFilter;
 
     /// <summary>
     /// Check if to see if the consumer has started the filter
@@ -40,6 +37,11 @@ public class Filter<T>
     public Expression<Func<T, bool>> And(Expression<Func<T, bool>> expr2)
     {
         return (HasFilter) ? _currentFilter = _currentFilter.And(expr2) : InitializeFilter(expr2);
+    }
+
+    public OptionalFilter<T> When(Func<bool> condition)
+    {
+        return new OptionalFilter<T>(this, condition);
     }
     /// <summary>
     /// Allows this object to be implicitely converted to <see cref="Func{T, TResult}"/>
