@@ -20,10 +20,10 @@ optional filters:
 combine filters:
 
     var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
-    var filter1 = FilterBuilder.For<PersonStud>(true)
-                               .And(e => e.Name.Contains("moot"));
+    var filter = FilterBuilder.For<PersonStud>(true)
+                              .And(e => e.Name.Contains("moot"));
  
-    var extendedFilter = FilterBuilder.Extend<PersonStud>(filter1)
+    var extendedFilter = FilterBuilder.Extend<PersonStud>(filter)
                                       .Or(e => e.Name.Contains("foo"));
                                     
 
