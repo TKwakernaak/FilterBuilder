@@ -18,6 +18,7 @@ optional filters usage:
 
 
 extend filters usage:
+
   var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
   var filter1 = FilterBuilder.For<PersonStud>(true)
                              .And(e => e.Name.Contains("moot"));
