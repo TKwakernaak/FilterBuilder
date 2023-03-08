@@ -19,12 +19,12 @@ optional filters usage:
 
 extend filters usage:
 
-  var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
-  var filter1 = FilterBuilder.For<PersonStud>(true)
+   var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
+   var filter1 = FilterBuilder.For<PersonStud>(true)
                              .And(e => e.Name.Contains("moot"));
 
-  var extendedFilter = FilterBuilder.Extend<PersonStud>(filter1)
-                                    .Or(e => e.Name.Contains("foo"));
+   var extendedFilter = FilterBuilder.Extend<PersonStud>(filter1)
+                                     .Or(e => e.Name.Contains("foo"));
                                     
 
                               
