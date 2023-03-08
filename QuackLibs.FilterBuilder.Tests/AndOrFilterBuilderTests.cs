@@ -2,18 +2,18 @@ using FluentAssertions;
 
 namespace QuackLibs.FilterBuilder.Tests
 {
-    public class FilterBuilderTests
+    public class AndOrFilterBuilderTests
     {
         [Fact]
         public void WhenAFilterBuilderIsCreated_WithAnAndFilterThatEvaluatesToFalse_NoResultsAreReturned()
         {
             //arrange
-            var testPeople = new List<PeopleStud> { new PeopleStud { Name = "testj" } };
-            var filter = FilterBuilder.For<PeopleStud>(e => true)
-                                       .And(e => e.Name.Contains("test"))
-                                       .And(e => e.Name.Contains("je"));
+            var testPeople = new List<PersonStud> { new PersonStud { Name = "testj" } };
+            var filter = FilterBuilder.For<PersonStud>(true)
+                                      .And(e => e.Name.Contains("test"))
+                                      .And(e => e.Name.Contains("je"));
 
-            Func<PeopleStud, bool> compiledFilter = filter.Compile();
+            Func<PersonStud, bool> compiledFilter = filter;
 
             var result = testPeople.Where(compiledFilter);
 
@@ -26,12 +26,12 @@ namespace QuackLibs.FilterBuilder.Tests
         public void WhenAFilterBuilderIsCreated_WithAnAndFilterThatEvaluatesToTrue_OneResultsIsReturned()
         {
             //arrange
-            var testPeople = new List<PeopleStud> { new PeopleStud { Name = "testje" } };
-            var filter = FilterBuilder.For<PeopleStud>(e => true)
+            var testPeople = new List<PersonStud> { new PersonStud { Name = "testje" } };
+            var filter = FilterBuilder.For<PersonStud>(true)
                                       .And(e => e.Name.Contains("test"))
                                       .And(e => e.Name.Contains("je"));
 
-            var result = testPeople.Where(filter.Compile());
+            var result = testPeople.Where(filter);
 
             result.Should().NotBeEmpty();
             result.Count().Should().Be(1);
@@ -41,12 +41,12 @@ namespace QuackLibs.FilterBuilder.Tests
         public void WhenAFilterBuilderIsCreated_WithAnAndAndOrFilterThatEvaluatesToTrue_OneResultIsReturned()
         {
             //arrange
-            var testPeople = new List<PeopleStud> { new PeopleStud { Name = "testj" } };
-            var filter = FilterBuilder.For<PeopleStud>(e => true)
+            var testPeople = new List<PersonStud> { new PersonStud { Name = "testj" } };
+            var filter = FilterBuilder.For<PersonStud>(true)
                                       .And(e => e.Name.Contains("test"))
                                       .Or(e => e.Name.Contains("moot"));
 
-            var result = testPeople.Where(filter.Compile());
+            var result = testPeople.Where(filter);
 
             result.Should().NotBeEmpty();
             result.Count().Should().Be(1);
