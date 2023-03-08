@@ -1,8 +1,8 @@
 # FilterBuilder
 An library that can be used to create dynamic filters / queries using a fluent builder. Filters can be used as a 
-    - Expression<func<T,bool>>
-    - Func<T,bool> 
-    - Filter<T>
+    * Expression<func<T,bool>>
+    * Func<T,bool> 
+    * Filter<T>
 
 and / or filters:
 
