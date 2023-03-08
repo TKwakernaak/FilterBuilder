@@ -1,14 +1,14 @@
 # FilterBuilder
 An library that can be used to create dynamic filters / queries using a fluent builder. 
 
-and / or filter usage:
+and / or filters:
 
     var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
     var filter = FilterBuilder.For<SampleClass>(e => true)
                               .And(e => e.Name.Contains("foo"))
                               .Or(e => e.Name.Contains("moot"));
 
-optional filters usage:
+optional filters:
 
     var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
     var filter = FilterBuilder.For<SampleClass>(e => true)
@@ -17,7 +17,7 @@ optional filters usage:
               
 
 
-extend filters usage:
+combine filters:
 
     var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
     var filter1 = FilterBuilder.For<PersonStud>(true)
