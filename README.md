@@ -4,14 +4,14 @@ An library that can be used to create dynamic filters / queries using a fluent b
 and / or filters:
 
     var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
-    var filter = FilterBuilder.For<SampleClass>(e => true)
+    var filter = FilterBuilder.For<SampleClass>(true)
                               .And(e => e.Name.Contains("foo"))
                               .Or(e => e.Name.Contains("moot"));
 
 optional filters:
 
     var sample = new List<SampleClass> { new SampleClass { Name = "foo" } };
-    var filter = FilterBuilder.For<SampleClass>(e => true)
+    var filter = FilterBuilder.For<SampleClass>(true)
                               .When(() => sample.IsActive)
                                 .Then(e => e.IsActive == true);
               
