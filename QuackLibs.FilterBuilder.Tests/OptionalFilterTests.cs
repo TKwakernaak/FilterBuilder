@@ -9,7 +9,7 @@ public class OptionalFilterTests
         //arrange
         var optionalFilterValue = new List<PersonStud> { new PersonStud { Name = "testje" } };
 
-        var filter = FilterBuilder.For<PersonStud>(true)
+        var filter = FilterBuilder.For<PersonStud>()
                                   .When(() => true)
                                     .Then(e => e.Name.Contains("testje"));
 
@@ -27,7 +27,7 @@ public class OptionalFilterTests
         var andFiltervalue = new PersonStud { Name = "andFilter" };
 
         //act
-        var filter = FilterBuilder.For<PersonStud>(false)
+        var filter = FilterBuilder.For<PersonStud>()
                                   .When(() => false)
                                     .Then(e => e.Name.Contains("optional"))
                                   .And(e => e.FirstName == "andFilter");
@@ -48,7 +48,7 @@ public class OptionalFilterTests
         var optionalFilterValue = new PersonStud { Name = "optional" };
         var andFiltervalue = new PersonStud { Name = "andFilter" };
 
-        Filter<PersonStud> filter = FilterBuilder.For<PersonStud>(defaultFilter: false)
+        Filter<PersonStud> filter = FilterBuilder.For<PersonStud>()
                                                  .When(() => false)
                                                    .Then(e => e.Name.Contains("optional"))
                                                  .And(e => e.Name.Equals("andFilter"));
