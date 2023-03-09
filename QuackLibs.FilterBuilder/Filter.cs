@@ -7,7 +7,7 @@ public class Filter<T>
     /// <summary>
     /// The predicate that holds the current expression.
     /// </summary>
-    public Expression<Func<T, bool>>? _currentFilter;
+    public Expression<Func<T, bool>> _currentFilter;
 
     /// <summary>
     /// The default expression created on object construction. can be invoked when no additional filters are chained

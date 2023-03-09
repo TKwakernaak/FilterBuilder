@@ -9,7 +9,7 @@ namespace QuackLibs.FilterBuilder.Tests
         {
             //arrange
             var testPeople = new List<PersonStud> { new PersonStud { Name = "testj" } };
-            var filter = FilterBuilder.For<PersonStud>(true)
+            var filter = FilterBuilder.For<PersonStud>()
                                       .And(e => e.Name.Contains("test"))
                                       .And(e => e.Name.Contains("je"));
 
@@ -27,7 +27,7 @@ namespace QuackLibs.FilterBuilder.Tests
         {
             //arrange
             var testPeople = new List<PersonStud> { new PersonStud { Name = "testje" } };
-            var filter = FilterBuilder.For<PersonStud>(true)
+            var filter = FilterBuilder.For<PersonStud>()
                                       .And(e => e.Name.Contains("test"))
                                       .And(e => e.Name.Contains("je"));
 
@@ -42,7 +42,7 @@ namespace QuackLibs.FilterBuilder.Tests
         {
             //arrange
             var testPeople = new List<PersonStud> { new PersonStud { Name = "testj" } };
-            var filter = FilterBuilder.For<PersonStud>(true)
+            var filter = FilterBuilder.For<PersonStud>()
                                       .And(e => e.Name.Contains("test"))
                                       .Or(e => e.Name.Contains("moot"));
 

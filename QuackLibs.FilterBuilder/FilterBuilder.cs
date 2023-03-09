@@ -13,16 +13,26 @@ public class FilterBuilder
     /// <typeparam name="T"></typeparam>
     /// <param name="defaultFilter"></param>
     /// <returns></returns>
-    public static Filter<T> For<T>(bool defaultFilter) => new(defaultFilter);
+    public static Filter<T> For<T>() => new(true);
 
 
     /// <summary>
-    /// Extend an existing <see cref="Filter{T}"/> or <see cref="{Expression{Func{T, bool}}""/>
+    /// Extend an existing <see cref="{Expression{Func{T, bool}}""/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="defaultFilter"></param>
     /// <returns></returns>
     public static Filter<T> Extend<T>(Expression<Func<T, bool>> existingFilter) => new(existingFilter);
+
+
+    /// <summary>
+    /// Extend an existing <see cref="Filter{T}"/>
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="defaultFilter"></param>
+    /// <returns></returns>
+    /// <remarks> extend filter for Filter<T>, provides similars functionality as Extend(Expression<Func<typeparamref name="</Func>)</remarks>
+    public static Filter<T> Extend<T>(Filter<T> existingFilter) => new(existingFilter);
 
 }
 
