@@ -1,5 +1,5 @@
 # FilterBuilder
-An library that can be used to create dynamic filters / queries using a fluent builder
+A library that can be used to create dynamic filters / queries using a fluent builder
 
 The following filters can be used interchangeable
     
