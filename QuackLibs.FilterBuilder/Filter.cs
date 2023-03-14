@@ -15,7 +15,7 @@ public class Filter<T>
     private readonly Expression<Func<T, bool>> _defaultFilter;
 
     /// <summary>
-    /// Check if to see if the consumer has started the filter
+    /// Check to see if the consumer has started the filter
     /// </summary>
     private bool HasFilter => (_currentFilter != null) && (_currentFilter != _defaultFilter);
 

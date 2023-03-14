@@ -1,6 +1,7 @@
 using FluentAssertions;
 
 namespace QuackLibs.FilterBuilder.Tests;
+
 public class AndOrFilterBuilderTests
 {
     [Fact]

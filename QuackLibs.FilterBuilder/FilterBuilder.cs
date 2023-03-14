@@ -8,7 +8,7 @@ public class FilterBuilder
     private FilterBuilder() { }
 
     /// <summary>
-    /// Start a new filter for <see cref="T"/>
+    /// Start a new filter for <typeparamref name="T"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
