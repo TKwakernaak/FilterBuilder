@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
 namespace QuackLibs.FilterBuilder;
 
@@ -8,7 +7,7 @@ public class FilterBuilder
     private FilterBuilder() { }
 
     /// <summary>
-    /// Start a new filter for <see cref="T"/>
+    /// Start a new filter for <typeparamref name="T"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
