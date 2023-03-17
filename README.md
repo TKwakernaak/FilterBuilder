@@ -47,7 +47,8 @@ combine filters:
     var filter = FilterBuilder.For<PersonStud>()
                               .And(e => e.Name.Contains("moot")); 
                               
-    //execute expression tree in entity framework. The filter (as is the case with all expressions) should not contain code that cannot be converted to sql.
+    //execute expression tree in entity framework. The filter (as is the case with all expressions)
+    //should not contain code that cannot be converted to sql.
     return await dbcontext.Sample
                           .Where(filter)
                           .ToListAsync();
