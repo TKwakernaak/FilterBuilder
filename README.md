@@ -54,7 +54,8 @@ combine filters:
                           
     //execute func
     var sample = new List<Sample> { new Sample { Name = "bla" },
-                                    new Sample{ Name = "foo" };
+                                    new Sample { Name = "foo" }};
+                                    
     var filter = FilterBuilder.For<Sample>()
                               .And(e => e.Name.Contains("bla")); 
                               
