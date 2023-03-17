@@ -33,18 +33,17 @@ optional filters:
 combine filters:
 
     var sample = new List<Sample> { new Sample { Name = "foo" } };
-    var filter = FilterBuilder.For<PersonStud>()
+    var filter = FilterBuilder.For<Sample>()
                               .And(e => e.Name.Contains("moot"));
  
-    var extendedFilter = FilterBuilder.Extend<PersonStud>(filter)
+    var extendedFilter = FilterBuilder.Extend<Sample>(filter)
                                       .Or(e => e.Name.Contains("foo"));
                                     
 
                               
               
 ## Execution:
-    var sample = new List<Sample> { new Sample { Name = "foo" } };
-    var filter = FilterBuilder.For<PersonStud>()
+    var filter = FilterBuilder.For<Sample>()
                               .And(e => e.Name.Contains("moot")); 
                               
     //execute expression tree in entity framework. The filter (as is the case with all expressions)
@@ -54,11 +53,12 @@ combine filters:
                           .ToListAsync();
                           
     //execute func
-    var sample = new List<Sample> { new Sample { Name = "bla" } };
-    var filter = FilterBuilder.For<PersonStud>()
-                              .And(e => e.Name.Contains("bl")); 
+    var sample = new List<Sample> { new Sample { Name = "bla" },
+                                    new Sample {"foo"} };
+    var filter = FilterBuilder.For<Sample>()
+                              .And(e => e.Name.Contains("bla")); 
                               
-    //returns the item in the list                      
+    //returns a list with one matching item                  
     var result = sample.Where(filter)
                        .ToList();
                               
