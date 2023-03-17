@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuackLibs.FilterBuilder.DependencyInjection", "QuackLibs.FilterBuilder.DependencyInjection\QuackLibs.FilterBuilder.DependencyInjection.csproj", "{48976357-D617-45A2-A737-F40E31F4B0CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{677978FE-9E33-4D88-8DC1-C1D3AAA64E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{677978FE-9E33-4D88-8DC1-C1D3AAA64E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{677978FE-9E33-4D88-8DC1-C1D3AAA64E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48976357-D617-45A2-A737-F40E31F4B0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48976357-D617-45A2-A737-F40E31F4B0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48976357-D617-45A2-A737-F40E31F4B0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48976357-D617-45A2-A737-F40E31F4B0CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
