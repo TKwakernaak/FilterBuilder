@@ -2,7 +2,7 @@
 
 namespace QuackLibs.FilterBuilder;
 
-public class Filter<T>
+public class Filter<T> 
 {
     /// <summary>
     /// The predicate that holds the current expression.

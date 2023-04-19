@@ -2,7 +2,7 @@
 
 namespace QuackLibs.FilterBuilder;
 
-public class FilterBuilder : IFilter
+public class FilterBuilder
 {
     private FilterBuilder() { }
 
